@@ -1,1 +1,1 @@
-# Fuzzy-Cognitive-Maps
+# Fuzzy Cognitive Maps
