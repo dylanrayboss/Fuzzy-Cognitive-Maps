@@ -7,7 +7,9 @@ During the simulation step there are not many parts that can be parallelized. Th
 Concept values are updated by multiplying the edge matrix by the column vector that holds the concept values at that time step. Matrix multiplication can get costly very quickly with size and makes sense to parallelize. One such way to do this is to call a function that is set to run in parallel called a remote function. They will execute on one or more engines instead of locally. There are two ways to makes remote functions and there is no difference in execution between them. Both are placed before the def line. You can either,
 
 @dview.remote(block=True)    
+
 or
+
 @dview.parallel(block=True)
 
 The @parallel method however breaks up the element wise operations and distributes them to engines to later reconstruct the result. Of these to options for easy parallelism it would be preferable to use the @parallel decorator.  
