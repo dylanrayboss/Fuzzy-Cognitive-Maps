@@ -1,5 +1,3 @@
-# Fuzzy Cognitive Maps
-
 # Parallelism in Fuzzy Cognitive Maps
 When simulating Fuzzy Cognitive Maps (FCMs), there are a variety of ways to implement parallelism. We are going to look at a few of the areas that we can parallelize to enhance the speed of simulating, and some cases of parallelization in learning methods. First, we will look at a few areas in the simulation phase that can be parallelized and a couple different ways to run them in parallel. Second, we will look at running genetic and learning algorithms in parallel for some cases that have been found. 
 During the simulation step there are not many parts that can be parallelized. Though they are few, they are significant as they are the parts with the highest time and computational complexity. The first of these we will look at is the simultaneous updating of the concept values. 
